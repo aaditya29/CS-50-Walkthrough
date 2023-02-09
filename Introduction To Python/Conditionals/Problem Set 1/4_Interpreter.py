@@ -10,3 +10,23 @@ For instance, if the user inputs 1 + 1, your program should output 2.0. Assume t
 
 Note that, just as python itself is an interpreter for Python, so will your interpreter.py be an interpreter for math!
 """
+
+
+def main():
+    x, y, z = input("Expression: ").strip().split(" ")
+    print(f"{calculation(int(x), str(y), int(z)):.1f}")
+
+
+def calculation(x, y, z):
+    """crunch numbers"""
+    if y == "+":
+        return x + z
+    elif y == "-":
+        return x - z
+    elif y == "*":
+        return x * z
+    elif y == "/":
+        return x / z
+
+
+main()
