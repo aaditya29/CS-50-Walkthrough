@@ -36,3 +36,28 @@ i = 1
 ```
 
 ## For Loop
+
+- A for loop is a different type of loop which iterates through a list of items.
+
+## Lists
+
+- Consider the world of Hogwarts from the famed Harry Potter universe. In the text editor, code as follows:
+
+```Python
+students = ["Hermoine", "Harry", "Ron"]
+
+print(students[0])
+print(students[1])
+print(students[2])
+```
+
+Notice how we have a list of students with their names as above. We then print the student who is at the 0th location, “Hermoine”. Each of the other students are printed as well.
+
+- We can use a loop to iterate over the list as follows:
+
+```Python
+students = ["Hermoine", "Harry", "Ron"]
+
+for student in students:
+    print(student)
+```
