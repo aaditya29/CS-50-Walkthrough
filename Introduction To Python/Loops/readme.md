@@ -61,3 +61,16 @@ students = ["Hermoine", "Harry", "Ron"]
 for student in students:
     print(student)
 ```
+
+## Length
+
+- We can utilize `len` as a way of checking the length of the list called students.
+
+```Python
+students = ["Hermoine", "Harry", "Ron"]
+
+for i in range(len(students)):
+    print(i + 1, students[i])
+```
+
+- Executing this code results in not only getting the position of each student plus one using i + 1, but also prints the name of each student. len allow you to dynamically see how long the list of the students is regardless how much it grows.
