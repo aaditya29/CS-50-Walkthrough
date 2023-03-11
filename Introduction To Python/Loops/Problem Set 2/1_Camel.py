@@ -8,7 +8,6 @@ In a file called camel.py, implement a program that prompts the user for the nam
 
 
 def main():
-    """Let's get on the case!"""
     case = input("camelCase: ").strip()
     print(f"snake_case: {snekCase(case)}")
 
