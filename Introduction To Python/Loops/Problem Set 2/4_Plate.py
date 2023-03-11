@@ -60,7 +60,6 @@ def is_valid(s):
                     elif ch.isalpha() and numcheck < 1:
                         validated += ch
 
-    # Let the caller know what's up
     if validated == s:
         return True
     else:
