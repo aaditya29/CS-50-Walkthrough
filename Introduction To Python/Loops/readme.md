@@ -74,3 +74,69 @@ for i in range(len(students)):
 ```
 
 - Executing this code results in not only getting the position of each student plus one using i + 1, but also prints the name of each student. len allow you to dynamically see how long the list of the students is regardless how much it grows.
+
+## Dictionaries
+
+- `dicts` or dictionaries is a data structure that allows you to associate keys with values where a list is a list of multiple values, a dict associates a key with a value.
+- We could use lists alone to accomplish this:
+
+```Python
+students = ["Hermoine", "Harry", "Ron", "Draco"]
+houses = ["Gryffindor", "Gryffindor", "Griffindor", "Slytherin"]
+```
+
+- We can better our code using a dict as follows:
+
+```Python
+students = {
+    "Hermoine": "Gryffindor",
+    "Harry": "Gryffindor",
+    "Ron": "Gryffindor",
+    "Draco": "Slytherin",
+}
+print(students["Hermoine"])
+print(students["Harry"])
+print(students["Ron"])
+print(students["Draco"])
+```
+
+- Improving it further
+
+```Python
+students = {
+    "Hermoine": "Gryffindor",
+    "Harry": "Gryffindor",
+    "Ron": "Gryffindor",
+    "Draco": "Slytherin",
+}
+for student in students:
+    print(student)
+```
+
+- Notice how executing this code, the for loop will only iterate through all the keys, resulting in a list of the names of the students.
+
+- To print both values and keys:
+
+```Python
+students = {
+    "Hermoine": "Gryffindor",
+    "Harry": "Gryffindor",
+    "Ron": "Gryffindor",
+    "Draco": "Slytherin",
+}
+for student in students:
+    print(student, students[student]) # students[student] will go to each student’s key and find the value of the their house.
+```
+
+- We can clean up the print function by improving our code as follows:
+
+```Python
+students = {
+    "Hermoine": "Gryffindor",
+    "Harry": "Gryffindor",
+    "Ron": "Gryffindor",
+    "Draco": "Slytherin",
+}
+for student in students:
+    print(student, students[student], sep=", ")
+```
