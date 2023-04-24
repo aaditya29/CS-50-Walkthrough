@@ -20,3 +20,5 @@ If we run this program and type in “cat”, we’ll suddenly see `ValueError: 
 
 Essentially, the Python interpreter does not like that we passed “cat” to the print function.
 An effective strategy to fix this potential error would be to create “error handling” to ensure the user behaves as we intend.
+
+## try
