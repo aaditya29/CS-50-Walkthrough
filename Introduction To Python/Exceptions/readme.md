@@ -132,3 +132,47 @@ main()
 ```
 
 That return will not only `break` us out of a loop, but it will also return a value.
+
+## pass
+
+- We can make it such that our code does not warn our user, but simply re-asks them our prompting question by modifying our code as follows:
+
+```Python
+def main():
+    x = get_int()
+    print(f"x is {x}")
+
+
+def get_int():
+    while True:
+        try:
+            return int(input("What's x?"))
+        except ValueError:
+            pass
+
+
+main()
+```
+
+- Our code will still function but will not repeatedly inform the user of their error. In some cases, you’ll want to be very clear to the user what error is being produced. Other times, you might decide that you simply want to ask them for input again.
+
+## Function Arguments
+
+- Final refinement that could improve the implementation of this get_int function. Right now, notice that we are relying currently upon the honor system that the x is in both the main and get_int functions. We probably want to pass in a prompt that the user sees when asked for input.
+- Modifying our code as follows:
+
+```Pythondef main():
+    x = get_int("What's x? ")
+    print(f"x is {x}")
+
+
+def get_int(prompt):
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            pass
+
+
+main()
+```
