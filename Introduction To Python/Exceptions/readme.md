@@ -49,3 +49,36 @@ except ValueError:
 
 print(f"x is {x}")
 ```
+
+## else
+
+- It turns out that there is another way to implement `try` that could catch errors of this nature. <br>
+  Editing our code as:
+
+```Python
+try:
+    x = int(input("What's x?"))
+except ValueError:
+    print("x is not an integer")
+else:
+    print(f"x is {x}")
+```
+
+If no exception occurs, it will then run the block of code within `else`.
+
+- Notice that we are being a bit rude to our user. If our user does not cooperate, we currently simply end our program. Consider how we can use a loop to prompt the user for x and if they don’t prompt again.<br>
+  Improving our code as follows:
+
+```Python
+while True:
+    try:
+        x = int(input("What's x?"))
+    except ValueError:
+        print("x is not an integer")
+    else:
+        break
+
+print(f"x is {x}")
+```
+
+Notice that `while True` will loop forever. If the user succeeds in supplying the correct input, we can break from the loop and then print the output. Now, a user that inputs something incorrectly will be asked for input again.
