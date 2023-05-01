@@ -22,3 +22,30 @@ Essentially, the Python interpreter does not like that we passed “cat” to th
 An effective strategy to fix this potential error would be to create “error handling” to ensure the user behaves as we intend.
 
 ## try
+
+- In Python `try` and `except` are ways of testing out user input before something goes wrong.<br>
+  For Example:
+
+```Python
+try:
+    x = int(input("What's x?"))
+    print(f"x is {x}")
+except ValueError:
+    print("x is not an integer")
+```
+
+When we run this code, inputting 50 will be accepted. However, typing in cat will produce an error visible to the user, instructing them why their input was not accepted.
+
+- This is still not the best way to implement this code. Notice that we are trying to do two lines of code.<br>
+  For best practice, we should only try the fewest lines of code possible that we are concerned could fail.
+
+  Editing our code as:
+
+```Python
+try:
+    x = int(input("What's x?"))
+except ValueError:
+    print("x is not an integer")
+
+print(f"x is {x}")
+```
