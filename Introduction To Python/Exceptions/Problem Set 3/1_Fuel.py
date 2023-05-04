@@ -5,3 +5,27 @@ In a file called fuel.py, implement a program that prompts the user for a fracti
 
 If, though, X or Y is not an integer, X is greater than Y, or Y is 0, instead prompt the user again. (It is not necessary for Y to be 4.) Be sure to catch any exceptions like ValueError or ZeroDivisionError.
 """
+
+
+def main():
+    while True:
+        try:
+            numerator, denominator = tank.split("/", 1)
+            if numerator.isdigit() and denominator.isdigit():
+                if int(numerator) <= int(denominator) and int(denominator) != 0:
+                    fuel_gauge = (int(numerator) / int(denominator)) * 100
+                    if fuel_gauge >= 99:
+                        print("F")
+                        break
+                    elif fuel_gauge < 99 and fuel_gauge > 1:
+                        print(f"{fuel_gauge:.0f}%")
+                        break
+                    else:
+                        print("E")
+        except (ValueError, ZeroDivisionError):
+            pass
+        else:
+            pass
+
+
+main()
