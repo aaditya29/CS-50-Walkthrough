@@ -29,3 +29,16 @@ from random import choice
 coin = choice(["heads", "tails"])
 print(coin)
 ```
+
+- Here, we now can import just the choice function of `random`
+- From that point forward, we no longer need to code random.choice. We can now only code choice alone. choice is loaded explicitly into our program. This saves system resources and potentially can make our code run faster!
+
+- Now consider the function random.randint(a, b). This function will generate a random number between a and b.
+- Modifying our code as follows:
+
+```Python
+import random
+
+number = random.randint(1, 10)
+print(number)
+```
