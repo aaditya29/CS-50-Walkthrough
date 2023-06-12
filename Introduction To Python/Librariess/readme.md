@@ -111,3 +111,5 @@ elif len(sys.argv) > 2:
 else:
     print("hello, my name is", sys.argv[1])
 ```
+
+- Now if you test our code, we will see how these exceptions are handled, providing the user with more refined advice. Even if the user types in too many or too few arguments, the user is provided clear instructions about how to fix the issue.
