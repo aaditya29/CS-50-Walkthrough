@@ -84,3 +84,17 @@ print("hello, my name is", sys.argv[1])
 ```
 
 - The program is going to look at what the user typed in the command line. Currently, if you type python name.py David into the terminal window, you will see hello, my name is David. Notice that sys.argv[1] is where David is being stored. Why is that? Well, in prior lessons, you might remember that lists start at the 0th element. What do you think is held currently in sys.argv[0]? If you guessed name.py, you would be correct!
+- There is a small problem with our program as it stands. What if the user does not type in the name at the command line?
+- Typing python `name.py` into the terminal window. An error list index out of range will be presented by the compiler. The reason for this is that there is nothing at sys.argv[1] because nothing was typed.
+- Here’s how we can protect our program from this type of error:
+
+```Python
+import sys
+
+try:
+    print("hello, my name is", sys.argv[1])
+except IndexError:
+    print("Too few arguments")
+```
+
+- The user will now be prompted with a useful hint about how to make the program work if they forget to type in a name.
