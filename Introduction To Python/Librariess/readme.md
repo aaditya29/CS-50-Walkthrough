@@ -70,3 +70,17 @@ print(statistics.mean([100, 90]))
 ```
 
 Here, we imported a different library called statistics. The mean function takes a list of values. This will print the average of these values. In your terminal window, type python average.py.
+
+## Command-Line Arguments
+
+- What if we wanted to be able to take input from the command-line? For example, rather than typing python average.py in the terminal, what if we wanted to be able to type python average.py 100 90 and be able to get the average between 100 and 90?
+- `sys` is a module that allows us to take arguments at the command line.
+- `argv` is a function within the sys module that allows us to learn about what the user typed in at the command line.
+
+```Python
+import sys
+
+print("hello, my name is", sys.argv[1])
+```
+
+- The program is going to look at what the user typed in the command line. Currently, if you type python name.py David into the terminal window, you will see hello, my name is David. Notice that sys.argv[1] is where David is being stored. Why is that? Well, in prior lessons, you might remember that lists start at the 0th element. What do you think is held currently in sys.argv[0]? If you guessed name.py, you would be correct!
