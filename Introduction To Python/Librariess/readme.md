@@ -55,3 +55,18 @@ for card in cards:
 ```
 
 ## Statistics
+
+- Python comes with a built-in statistics library.
+
+### Using This Module
+
+- `average` is a function of this library that is quite useful.
+- Typing code average.py:
+
+```Python
+import statistics
+
+print(statistics.mean([100, 90]))
+```
+
+Here, we imported a different library called statistics. The mean function takes a list of values. This will print the average of these values. In your terminal window, type python average.py.
