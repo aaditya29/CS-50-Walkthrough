@@ -132,3 +132,13 @@ for arg in sys.argv:
 - If we type `python name.py David Carter Rongxin` into the terminal window, the compiler will output not just the intended output of the names, but also hello, my name is name.py.
 
 - `slice` can be employed in our code to start the list somewhere different.
+
+```Python
+import sys
+
+if len(sys.argv) < 2:
+    sys.exit("Too few arguments")
+
+for arg in sys.argv[1:]:
+    print("hello, my name is", arg)
+```
