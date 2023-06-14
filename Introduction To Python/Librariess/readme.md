@@ -166,3 +166,34 @@ if len(sys.argv) == 2:
 
 - APIs or “application program interfaces” allow you to connect to the code of others.
 - `requests` is a package that allows your program to behave as a web browser would.
+- It turns out that Apple iTunes has its own API that you can access in our programs. In our internet browser, we can visit `https://itunes.apple.com/search?entity=song&limit=1&term=weezer` and a text file will be downloaded.
+- The format in the downloaded text file is called <b>JSON</b>, a text-based format that is used to exchange text-based data between applications. Literally, Apple is providing a JSON file that we could interpret in our own Python program.
+
+```Python
+import requests
+import sys
+
+if len(sys.argv) != 2:
+    sys.exit()
+
+response = requests.get("https://itunes.apple.com/search?entity=song&limit=1&term=" + sys.argv[1])
+print(response.json())
+```
+
+- The returned value of `requests.get` will be stored in response.
+- Also Python has a built-in JSON library that can help us interpret the data received.
+  Modifying our previous code:
+
+```Python
+import json
+import requests
+import sys
+
+if len(sys.argv) != 2:
+    sys.exit()
+
+response = requests.get("https://itunes.apple.com/search?entity=song&limit=1&term=" + sys.argv[1])
+print(json.dumps(response.json(), indent=2))
+```
+
+- The `json.dumps` is implemented such that it utilizes indent to make the output more readable.
