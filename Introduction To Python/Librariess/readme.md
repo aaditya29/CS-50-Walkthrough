@@ -161,3 +161,8 @@ if len(sys.argv) == 2:
     cowsay.cow("hello, " + sys.argv[1])
 
 ```
+
+## APIs
+
+- APIs or “application program interfaces” allow you to connect to the code of others.
+- `requests` is a package that allows your program to behave as a web browser would.
