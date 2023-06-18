@@ -72,3 +72,16 @@ file.close()
 ```
 
 - Notice that the only change to our code is that the w has been changed to a for “append”.
+
+## `with`
+
+- The keyword with allows you to automate the closing of a file.
+- Modifying above code:
+
+```Python
+name = input("What's your name? ")
+
+with open("names.txt", "a") as file:
+    file.write(f"{name}\n")
+    # notice that the line below with is indented.
+```
