@@ -85,3 +85,33 @@ with open("names.txt", "a") as file:
     file.write(f"{name}\n")
     # notice that the line below with is indented.
 ```
+
+- Up until this point, we have been exclusively writing to a file. Now modifying our code to read from a file:
+
+```Python
+with open("names.txt", "r") as file:
+    lines = file.readlines()
+
+for line in lines:
+    print("hello,", line)
+```
+
+`readlines` has a special ability to read all the lines of a file and store them in a file called lines. Running our program, we will notice that the output is quite ugly. There seem to be multiple line breaks where there should be only one.
+
+- Fixing this error:
+
+```Python
+with open("names.txt", "r") as file:
+    lines = file.readlines()
+
+for line in lines:
+    print("hello,", line.rstrip()) # rstrip has the effect of removing the extraneous line break at the end of each line
+```
+
+- Simplifying more the above code:
+
+```Python
+with open("names.txt", "r") as file:
+    for line in file:
+        print("hello,", line.rstrip())
+```
