@@ -115,3 +115,18 @@ with open("names.txt", "r") as file:
     for line in file:
         print("hello,", line.rstrip())
 ```
+
+- Improving the code aboveto allow for the sorting of the names:
+
+```Python
+names = []
+
+with open("names.txt") as file:
+    for line in file:
+        names.append(line.rstrip())
+
+for name in sorted(names):
+    print(f"hello, {name}")
+```
+
+- `names` is a blank list where we can collect the names. Each name is appended to the names list in memory. Then, each name in the sorted list in memory is printed.
