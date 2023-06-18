@@ -61,3 +61,14 @@ file.close()
 ```
 
 - The `open` function opens a file called `names.txt` with writing enabled, as signified by the `w`. The code above assigns that opened file to a variable called `file`. The line `file.write(name)` writes the name to the text file. The line after that closes the file.
+- Ideally, we want to be able to append each of our names to the file. Removing the existing text file by typing `rm names.txt` in the terminal window. Then, modifying our code as follows:
+
+```Python
+name = input("What's your name? ")
+
+file = open("names.txt", "a")
+file.write(name)
+file.close()
+```
+
+- Notice that the only change to our code is that the w has been changed to a for “append”.
