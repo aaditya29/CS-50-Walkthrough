@@ -47,3 +47,17 @@ for name in sorted(names):
 - Once this program is executed, all information is lost. File I/O allows your program to store this information such that it can be used later.
 
 ## `open`
+
+- `open` is a functionality built into Python that allows us to open a file and utilize it in our program. The `open` function allows us to open a file such that you can read from it or write to it.
+- Enabling file I/O in program:
+
+```Python
+name = input("What's your name? ")
+
+file = open("names.txt", "w")
+file.write(name)
+file.close()
+
+```
+
+- The `open` function opens a file called `names.txt` with writing enabled, as signified by the `w`. The code above assigns that opened file to a variable called `file`. The line `file.write(name)` writes the name to the text file. The line after that closes the file.
