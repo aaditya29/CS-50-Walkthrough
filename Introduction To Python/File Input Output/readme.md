@@ -1,4 +1,6 @@
-# File I/O
+# File I/O In Python
+
+## File I/O
 
 - File I/O is the ability of a program to take a file as input or create a file as output.
 - Typing in the terminal window `code names.py`:
@@ -43,3 +45,5 @@ for name in sorted(names):
 ```
 
 - Once this program is executed, all information is lost. File I/O allows your program to store this information such that it can be used later.
+
+## `open`
