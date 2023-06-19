@@ -165,3 +165,18 @@ with open("students.csv") as file:
 ```
 
 - The `split` function actually returns two values: The one before the comma and the one after the comma. Accordingly, we can rely upon that functionality to assign two variables at once instead of one.
+
+- Providing this list as sorted output:
+
+```Python
+students = []
+
+with open("students.csv") as file:
+    for line in file:
+        name, house = line.rstrip().split(",")
+        students.append(f"{name} is in {house}")
+
+for student in sorted(students):
+    print(student)
+
+```
