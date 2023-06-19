@@ -151,3 +151,17 @@ with open("students.csv") as file:
         row = line.rstrip().split(",")
         print(f"{row[0]} is in {row[1]}")
 ```
+
+`rstrip` removes the end of each line in our CSV file. `split` tells the compiler where to find the end of each of our values in our CSV file. row[0] is the first element in each line of our CSV file. row[1] is the second element in each line in our CSV file.
+
+- The above code is effective at dividing each line or “record” of our CSV file. However, it’s a bit cryptic to look at if you are unfamiliar with this type of syntax. Python has built-in ability that could further simplify this code.
+- Modifying our code as follows:
+
+```Python
+with open("students.csv") as file:
+    for line in file:
+        name, house = line.rstrip().split(",")
+        print(f"{name} is in {house}")
+```
+
+- The `split` function actually returns two values: The one before the comma and the one after the comma. Accordingly, we can rely upon that functionality to assign two variables at once instead of one.
