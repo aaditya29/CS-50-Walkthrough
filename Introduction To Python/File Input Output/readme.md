@@ -180,3 +180,5 @@ for student in sorted(students):
     print(student)
 
 ```
+
+- We created a list called `students`. We `append` each string to this list. Then, we output a sorted version of our list.
