@@ -130,3 +130,24 @@ for name in sorted(names):
 ```
 
 - `names` is a blank list where we can collect the names. Each name is appended to the names list in memory. Then, each name in the sorted list in memory is printed.
+
+## `csv`
+
+- CSV stands for “comma separated values”.
+- In our terminal window, we type code students.csv which looks like the following:
+
+```
+Hermoine,Gryffindor
+Harry,Gryffindor
+Ron,Gryffindor
+Draco,Slytherin
+```
+
+- Typing a new program `code students.py`
+
+```Python
+with open("students.csv") as file:
+    for line in file:
+        row = line.rstrip().split(",")
+        print(f"{row[0]} is in {row[1]}")
+```
