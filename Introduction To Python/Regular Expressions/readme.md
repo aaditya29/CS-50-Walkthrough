@@ -56,3 +56,20 @@ else:
 ```
 
 - The endswith method will check to see if domain contains .edu. However, a nefarious user could still break our code. For example, a user could type in abc@.edu and it would be considered valid.
+
+- We could keep iterating upon this code ourselves. However, it turns out that Python has an existing library called `re` that has a number of built-in functions that can validate user inputs against patterns.
+- One of the most versatile functions within the library `re` is `search`. The `search` library follows the signature `re.search(pattern, string, flags=0)`
+- Following this signature, we can modify our code as follows:
+
+```Python
+import re
+
+email = input("What's your email? ").strip()
+
+if re.search("@", email):
+    print("Valid")
+else:
+    print("Invalid")
+```
+
+- This does not increase the functionality of our program at all. In fact, it is somewhat a step back.
