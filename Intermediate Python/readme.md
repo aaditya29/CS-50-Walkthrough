@@ -25,4 +25,4 @@ Introduction Intermediate Python Programming Course
 - The Asterisk(\*)
 - Copying
 - Context manager
-- Python Tricks.ipynb
+- Python Tricks
