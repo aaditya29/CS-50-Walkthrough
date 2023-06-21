@@ -73,3 +73,12 @@ else:
 ```
 
 - This does not increase the functionality of our program at all. In fact, it is somewhat a step back.
+- We can further our program’s functionality. However, we need to advance our vocabulary around validation. It turns out that in the world of regular expressions there are certain symbols that allow us to identify patterns. At this point, we have only been checking for specific pieces of text like @. It so happens that many special symbols can be passed to the compiler for the purpose of engaging in validation. A non-exhaustive list of those patterns is as follows:
+  `
+  . any character except a new line
+  - 0 or more repetitions
+  * 1 or more repetitions
+    ? 0 or 1 repetition
+    {m} m repetitions
+    {m,n} m-n repetitions
+    `
