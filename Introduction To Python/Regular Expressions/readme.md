@@ -83,3 +83,18 @@ else:
 {m} m repetitions
 {m,n} m-n repetitions
 ```
+
+- Implementing this inside our code:
+
+```Python
+import re
+
+email = input("What's your email? ").strip()
+
+if re.search(".+@.+", email):
+    print("Valid")
+else:
+    print("Invalid")
+```
+
+- Notice that we don’t care what the username or domain is. What we care about is the pattern. .+ is used to determine if anything is to the left of the email address and if anything is to the right of the email address. Running our code, typing in abc@, we’ll notice that the input is regarded as invalid as we would hope.
